@@ -1,0 +1,25 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button--primary {
+    background-color: var(--color-text);
+    color: var(--color-white);
+}
+
+.button--primary:hover {
+    background-color: #444444;
+}

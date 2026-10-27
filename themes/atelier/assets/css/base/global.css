@@ -1,0 +1,35 @@
+body {
+    min-width: 320px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+}
+
+a {
+    color: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+.container {
+    width: 100%;
+    max-width: var(--container-width);
+    margin-inline: auto;
+    padding-inline: var(--container-gutter);
+}
