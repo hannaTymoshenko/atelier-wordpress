@@ -10,10 +10,27 @@
 
     --container-width: 1440px;
     --container-gutter: 40px;
+
+    --font-size-body: 16px;
+    --font-size-small: 14px;
+    --font-size-caption: 13px;
+
+    --font-size-h1: 56px;
+    --font-size-h2: 40px;
+    --font-size-h3: 28px;
+    --font-size-hero: 80px;
 }
 
 @media (max-width: 767px) {
+
     :root {
         --container-gutter: 20px;
+
+        --font-size-h1: 40px;
+        --font-size-h2: 32px;
+        --font-size-h3: 24px;
+        --font-size-hero: 48px;
+
     }
+
 }
