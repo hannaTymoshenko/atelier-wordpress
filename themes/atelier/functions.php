@@ -22,3 +22,11 @@ function atelier_setup() {
 }
 
 add_action('after_setup_theme', 'atelier_setup');
+
+wp_enqueue_script(
+    'atelier-header',
+    get_theme_file_uri('assets/js/header.js'),
+    [],
+    wp_get_theme()->get('Version'),
+    true
+);
