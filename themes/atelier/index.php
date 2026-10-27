@@ -1,3 +1,7 @@
-<?php
+<?php get_header(); ?>
 
-echo 'Hello from Atelier!';
+    <main>
+        <h1>Welcome to Atelier</h1>
+    </main>
+
+<?php get_footer(); ?>

@@ -5,3 +5,10 @@ Description: Custom WordPress theme for an architecture studio.
 Version: 1.0.0
 Text Domain: atelier
 */
+
+body {
+    margin: 0;
+    background-color: #f5f3ee;
+    color: #222;
+    font-family: Arial, sans-serif;
+}
