@@ -1,0 +1,17 @@
+/*
+!/.gitignore
+!/themes/
+!/plugins/
+
+/themes/*
+!/themes/atelier/
+
+/plugins/*
+!/plugins/atelier-core/
+
+.DS_Store
+.idea/
+node_modules/
+vendor/
+.env
+.env.*
