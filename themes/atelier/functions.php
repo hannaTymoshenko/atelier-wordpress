@@ -7,6 +7,16 @@ function atelier_enqueue_assets() {
         [],
         wp_get_theme()->get('Version')
     );
+
+
+    if (is_singular('project')) {
+        wp_enqueue_style(
+            'atelier-project-single',
+            get_template_directory_uri() . '/assets/css/project-single.css',
+            [],
+            wp_get_theme()->get('Version')
+        );
+    }
 }
 
 add_action('wp_enqueue_scripts', 'atelier_enqueue_assets');

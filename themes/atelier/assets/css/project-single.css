@@ -1,0 +1,115 @@
+.project-single {
+    padding: 80px 0 80px;
+}
+
+.project-single__title {
+    margin: 0 0 50px;
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+.project-single__image {
+    margin-bottom: 30px;
+}
+
+.project-single__image img {
+    display: block;
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.project-single__details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 0 0 60px;
+    padding: 30px 0;
+    border-top: 1px solid #d8d5cf;
+    border-bottom: 1px solid #d8d5cf;
+}
+
+.project-single__detail-label {
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.project-single__detail-value {
+    margin: 0;
+    font-size: 18px;
+}
+
+.project-single__content .wp-block-gallery {
+    gap: 30px;
+}
+
+.project-single__content {
+    font-size: var(--font-size-body);
+    line-height: 1.8;
+    padding-top: 20px;
+}
+
+.project-single__content .wp-block-columns {
+    margin-bottom: 20px;
+}
+
+.project-single__content .wp-block-paragraph {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+    .project-single__content .wp-block-image {
+        width: calc(50% - 30px) !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .project-single {
+        padding: 60px 0;
+    }
+
+    .project-single__title {
+        font-size: 56px;
+    }
+
+    .project-single__image img {
+        height: 450px;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-single {
+        padding: 40px 0;
+    }
+
+    .project-single__title {
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+
+    .project-single__image {
+        margin-bottom: 30px;
+    }
+
+    .project-single__image img {
+        height: 300px;
+    }
+
+    .project-single__details {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-bottom: 40px;
+        padding: 24px 0;
+    }
+
+    .project-single__content {
+        font-size: 15px;
+    }
+
+}
