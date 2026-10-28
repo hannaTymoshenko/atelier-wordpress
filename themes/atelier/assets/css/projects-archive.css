@@ -1,0 +1,130 @@
+.projects-archive {
+    padding: 80px 0 120px;
+}
+
+.projects-archive__header {
+    margin-bottom: 48px;
+}
+
+.projects-archive__title {
+    margin-bottom: 16px;
+}
+
+.projects-archive__description {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.projects-archive__grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px 24px;
+}
+
+.project-card {
+    min-width: 0;
+}
+
+.project-card__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.project-card__image {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.project-card__image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+.project-card__details {
+    min-width: 0;
+}
+
+.project-card__title {
+    margin: 0 0 6px;
+    font-size: 28px;
+    line-height: 1.2;
+    font-weight: 400;
+}
+
+.project-card__category {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.project-card__arrow {
+    flex-shrink: 0;
+    font-size: 24px;
+    line-height: 1;
+    transition: transform 0.2s ease;
+}
+
+@media (hover: hover) {
+    .project-card__link:hover .project-card__image img {
+        transform: scale(1.03);
+    }
+
+    .project-card__link:hover .project-card__arrow {
+        transform: translateX(5px);
+    }
+}
+
+.project-card__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 5px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .project-card__image img,
+    .project-card__arrow {
+        transition: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-archive {
+        padding: 48px 0 80px;
+    }
+
+    .projects-archive__header {
+        margin-bottom: 32px;
+    }
+
+    .projects-archive__description {
+        font-size: 16px;
+    }
+
+    .projects-archive__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .project-card__info {
+        padding-top: 12px;
+    }
+
+    .project-card__title {
+        font-size: 24px;
+    }
+}
