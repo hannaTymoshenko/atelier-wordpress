@@ -54,11 +54,27 @@ function atelier_enqueue_assets() {
         );
     }
 
-    if (is_front_page() || is_page_template('page-about.php')) {
+    if (is_front_page()) {
+        wp_enqueue_style(
+            'atelier-hero',
+            get_theme_file_uri('assets/css/hero.css'),
+            [],
+            $version
+        );
+    }
+
+        if (is_front_page() || is_page_template('page-about.php')) {
         wp_enqueue_style(
             'atelier-swiper',
             get_theme_file_uri('assets/vendor/swiper/swiper-bundle.min.css'),
             [],
+            $version
+        );
+
+        wp_enqueue_style(
+            'atelier-image-text',
+            get_theme_file_uri('assets/css/image-text.css'),
+            ['atelier-style'],
             $version
         );
 

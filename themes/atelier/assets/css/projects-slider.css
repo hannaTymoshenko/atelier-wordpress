@@ -1,5 +1,5 @@
 .projects-slider {
-    padding: 80px 0;
+    padding: 80px 0 0;
 }
 
 .projects-slider__header {
@@ -92,9 +92,9 @@
     outline-offset: 4px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .projects-slider {
-        padding: 60px 0;
+        padding: 60px 0 0;
     }
 
     .projects-slider__header {

@@ -74,6 +74,15 @@ $hero_link = get_field('hero_link');
                 ],
         ]);
         ?>
+
+        <?php
+        get_template_part('template-parts/image-text-section', null, [
+                'title' => get_field('about_title'),
+                'description' => get_field('about_description'),
+                'image' => get_field('about_image'),
+                'link' => get_field('about_link'),
+        ]);
+        ?>
     </main>
 
 <?php get_footer(); ?>

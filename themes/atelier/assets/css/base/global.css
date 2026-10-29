@@ -14,29 +14,30 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
+    line-height: 1.2;
 }
 
 h1, .title  {
     font-size: 72px;
 }
 
-h2 {
+h2, .h2 {
     font-size: 52px;
 }
 
-h3 {
+h3, .h3 {
     font-size: 36px;
 }
 
-h4 {
+h4, .h4 {
     font-size: 28px;
 }
 
-h5 {
+h5, .h5 {
     font-size: 24px;
 }
 
-h6 {
+h6, .h6 {
     font-size: 20px;
 }
 
@@ -45,39 +46,60 @@ h6 {
     padding-bottom: 80px;
 }
 
-@media (max-width: 991px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+@media (max-width: 1023px) {
+    h1, .title {
+        font-size: 56px;
+    }
+
+    h2, .h2 {
+        font-size: 42px;
+    }
+
+    h3, .h3 {
+        font-size: 32px;
+    }
+
+    h4, .h4 {
+        font-size: 26px;
+    }
+
+    h5, .h5 {
+        font-size: 22px;
+    }
+
+    h6, .h6 {
+        font-size: 19px;
+    }
 }
 
 @media (max-width: 768px) {
 
     .main {
-        padding-top: 40px;
-        padding-bottom: 40px;
+        padding-top: 60px;
+        padding-bottom: 60px;
     }
 
     h1, .title  {
         font-size: 44px;
     }
 
-    h2 {
+    h2, .h2 {
         font-size: 36px;
     }
 
-    h3 {
+    h3, .h3 {
         font-size: 28px;
     }
 
-    h4 {
+    h4, .h4 {
         font-size: 24px;
     }
 
-    h5 {
+    h5, .h5 {
         font-size: 20px;
     }
 
-    h6 {
+    h6, .h6 {
         font-size: 18px
     }
 
