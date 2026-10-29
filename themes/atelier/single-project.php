@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-    <main class="project-single">
+    <main class="project-single main">
         <div class="container">
 
             <?php if (have_posts()) : ?>
@@ -28,7 +28,7 @@
                     $gallery = implode('', array_map('render_block', $gallery_blocks));
                     ?>
 
-                    <h1 class="project-single__title">
+                    <h1 class="title project-single__title">
                         <?php the_title(); ?>
                     </h1>
 
@@ -91,6 +91,41 @@
             <?php endif; ?>
 
         </div>
+
+        <?php
+        $previous_project = get_previous_post();
+        $next_project = get_next_post();
+        $projects_url = get_post_type_archive_link('project');
+        ?>
+
+        <nav class="project-navigation" aria-label="Project navigation">
+            <div class="container">
+                <div class="project-navigation__inner">
+                    <div class="project-navigation__item project-navigation__item--prev">
+                        <?php if ($previous_project) : ?>
+                            <a href="<?php echo esc_url(get_permalink($previous_project)); ?>">
+                                <span class="project-navigation__label">← Previous Project</span>
+                                <span class="project-navigation__title"><?php echo esc_html(get_the_title($previous_project)); ?></span>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+
+                    <a class="project-navigation__all" href="<?php echo esc_url($projects_url); ?>">
+                        <span class="project-navigation__label">All Projects</span>
+                        <span class="project-navigation__title">View All</span>
+                    </a>
+
+                    <div class="project-navigation__item project-navigation__item--next">
+                        <?php if ($next_project) : ?>
+                            <a href="<?php echo esc_url(get_permalink($next_project)); ?>">
+                                <span class="project-navigation__label">Next Project →</span>
+                                <span class="project-navigation__title"><?php echo esc_html(get_the_title($next_project)); ?></span>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </main>
 
 <?php get_footer(); ?>

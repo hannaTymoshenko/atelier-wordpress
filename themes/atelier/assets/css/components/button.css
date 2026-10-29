@@ -23,3 +23,22 @@
 .button--primary:hover {
     background-color: #444444;
 }
+
+.arrow-link{
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.arrow-link span {
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.arrow-link:hover span {
+    transform: translateX(5px);
+}

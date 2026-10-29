@@ -53,25 +53,6 @@
     line-height: 1.6;
 }
 
-.hero__link {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    width: fit-content;
-    font-size: 14px;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.hero__link span {
-    font-size: 20px;
-    transition: transform 0.2s ease;
-}
-
-.hero__link:hover span {
-    transform: translateX(5px);
-}
-
 @media (max-width: 767px) {
     .hero {
         min-height: 600px;

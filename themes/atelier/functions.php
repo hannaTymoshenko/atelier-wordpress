@@ -28,20 +28,12 @@ function atelier_enqueue_assets() {
     }
 
     if (is_post_type_archive('project') || is_tax('project_type')) {
-        wp_enqueue_style(
-            'atelier-projects-archive',
-            get_theme_file_uri('assets/css/projects-archive.css'),
-            ['atelier-style'],
-            $version
-        );
-
         wp_enqueue_script(
             'atelier-projects-filter',
             get_theme_file_uri('assets/js/projects-filter.js'),
             [],
             $version,
             true
-
         );
 
         wp_add_inline_script(
@@ -50,6 +42,47 @@ function atelier_enqueue_assets() {
                 'apiUrl' => esc_url_raw(rest_url('atelier/v1/projects')),
             ]) . ';',
             'before'
+        );
+    }
+
+    if (is_front_page() || is_post_type_archive('project') || is_tax('project_type') || is_page_template('page-about.php')) {
+        wp_enqueue_style(
+            'atelier-projects-archive',
+            get_theme_file_uri('assets/css/projects-archive.css'),
+            ['atelier-style'],
+            $version
+        );
+    }
+
+    if (is_front_page() || is_page_template('page-about.php')) {
+        wp_enqueue_style(
+            'atelier-swiper',
+            get_theme_file_uri('assets/vendor/swiper/swiper-bundle.min.css'),
+            [],
+            $version
+        );
+
+        wp_enqueue_style(
+            'atelier-projects-slider',
+            get_theme_file_uri('assets/css/projects-slider.css'),
+            ['atelier-style', 'atelier-projects-archive', 'atelier-swiper'],
+            $version
+        );
+
+        wp_enqueue_script(
+            'atelier-swiper',
+            get_theme_file_uri('assets/vendor/swiper/swiper-bundle.min.js'),
+            [],
+            $version,
+            true
+        );
+
+        wp_enqueue_script(
+            'atelier-projects-slider',
+            get_theme_file_uri('assets/js/projects-slider.js'),
+            ['atelier-swiper'],
+            $version,
+            true
         );
     }
 }

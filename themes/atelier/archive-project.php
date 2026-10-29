@@ -1,9 +1,9 @@
 <?php get_header(); ?>
 
-    <main class="projects-archive">
+    <main class="projects-archive main">
         <div class="container">
             <div class="projects-archive__header">
-                <h1 class="projects-archive__title">Selected Projects</h1>
+                <h1 class="title projects-archive__title">Selected Projects</h1>
                 <p class="projects-archive__description">
                     A collection of spaces shaped by thoughtful design.
                 </p>

@@ -39,7 +39,7 @@ $hero_link = get_field('hero_link');
 
                 <?php if ($hero_link) : ?>
                     <a
-                            class="hero__link"
+                            class="arrow-link"
                             href="<?php echo esc_url($hero_link['url']); ?>"
                             target="<?php echo esc_attr($hero_link['target'] ?: '_self'); ?>"
                     >
@@ -49,6 +49,31 @@ $hero_link = get_field('hero_link');
                 <?php endif; ?>
             </div>
         </section>
+        <?php
+        $featured_projects = new WP_Query([
+                'post_type' => 'project',
+                'post_status' => 'publish',
+                'posts_per_page' => -1,
+                'meta_query' => [
+                        [
+                                'key' => 'featured_project',
+                                'value' => '1',
+                        ],
+                ],
+        ]);
+        ?>
+
+        <?php
+        get_template_part('template-parts/projects-slider', null, [
+                'title' => 'Selected Works',
+                'label' => 'Our Portfolio',
+                'projects' => $featured_projects,
+                'link' => [
+                        'url' => get_post_type_archive_link('project'),
+                        'title' => 'View All Projects',
+                ],
+        ]);
+        ?>
     </main>
 
 <?php get_footer(); ?>

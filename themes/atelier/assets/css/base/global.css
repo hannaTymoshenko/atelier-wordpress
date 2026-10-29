@@ -16,7 +16,7 @@ h6 {
     font-family: var(--font-heading);
 }
 
-h1 {
+h1, .title  {
     font-size: 72px;
 }
 
@@ -40,9 +40,24 @@ h6 {
     font-size: 20px;
 }
 
+.main {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+@media (max-width: 991px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
 @media (max-width: 768px) {
 
-    h1 {
+    .main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    h1, .title  {
         font-size: 44px;
     }
 
