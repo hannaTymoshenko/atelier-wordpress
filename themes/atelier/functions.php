@@ -140,6 +140,13 @@ function atelier_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/about.css')
     );
+
+    wp_enqueue_style(
+        'atelier-contact',
+        get_template_directory_uri() . '/assets/css/contact.css',
+        [],
+        filemtime(get_template_directory() . '/assets/css/contact.css')
+    );
 }
 
 add_action('wp_enqueue_scripts', 'atelier_enqueue_assets');
