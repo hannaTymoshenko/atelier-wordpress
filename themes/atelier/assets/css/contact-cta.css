@@ -1,0 +1,181 @@
+.contact-cta {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0 100px;
+    background-color: var(--color-background);
+}
+
+.contact-cta .container {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-cta__header {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+.contact-cta__header::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0.4;
+}
+
+.contact-cta__eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.contact-cta__inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 80px;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+}
+
+.contact-cta__title {
+    max-width: 650px;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.contact-cta__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+}
+
+.contact-cta__description {
+    max-width: 340px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-cta__button {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.contact-cta__button:hover {
+    background: transparent;
+    color: inherit;
+}
+
+.contact-cta__button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 24px;
+    line-height: 1;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-cta__button:hover .contact-cta__button-icon {
+    background-color: var(--color-text);
+    color: var(--color-background);
+}
+
+.contact-cta__button-text {
+    padding-bottom: 4px;
+    border-bottom: 1px solid currentColor;
+}
+
+.contact-cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 55%;
+    height: 100%;
+    background: url("../images/leaf-shadow.png") no-repeat top right / contain;
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+@media (max-width: 1023px) {
+    .contact-cta {
+        padding: 70px 0 80px;
+    }
+
+    .contact-cta__header {
+        margin-bottom: 60px;
+    }
+
+    .contact-cta__inner {
+        gap: 40px;
+    }
+
+    .contact-cta__title {
+        font-size: 52px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-cta {
+        padding: 60px 0 70px;
+    }
+
+    .contact-cta__header {
+        gap: 20px;
+        margin-bottom: 48px;
+    }
+
+    .contact-cta__inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-cta__title {
+        font-size: 44px;
+    }
+
+    .contact-cta__content {
+        gap: 32px;
+    }
+
+    .contact-cta__description {
+        font-size: 16px;
+    }
+
+    .contact-cta__button {
+        font-size: 16px;
+    }
+
+    .contact-cta__button-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 20px;
+    }
+
+    .contact-cta::before {
+        width: 80%;
+        opacity: 0.1;
+    }
+}

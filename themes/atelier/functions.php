@@ -110,6 +110,21 @@ function atelier_enqueue_assets() {
             $version
         );
     }
+
+    if (
+        is_front_page()
+        || is_page('about')
+        || is_post_type_archive('project')
+        || is_tax('project_type')
+        || is_singular('project')
+    ) {
+        wp_enqueue_style(
+            'atelier-contact-cta',
+            get_theme_file_uri('assets/css/contact-cta.css'),
+            ['atelier-style'],
+            $version
+        );
+    }
 }
 
 add_action('wp_enqueue_scripts', 'atelier_enqueue_assets');

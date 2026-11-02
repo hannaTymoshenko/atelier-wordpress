@@ -124,6 +124,14 @@ $hero_link = get_field('hero_link');
             </section>
         <?php endif; ?>
 
+        <?php
+        get_template_part('template-parts/contact-cta', null, [
+                'title'       => get_field('cta_title') ?: 'Have a project in mind?',
+                'description' => get_field('cta_description') ?: "Let's create something meaningful together.",
+                'button'      => get_field('cta_button') ?: [],
+        ]);
+        ?>
+
     </main>
 
 <?php get_footer(); ?>
