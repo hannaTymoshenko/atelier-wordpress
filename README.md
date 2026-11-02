@@ -8,7 +8,7 @@ The website was built from scratch using PHP, JavaScript and CSS without a page 
 
 ### Homepage
 
-![ATELIER Homepage](screenshots/homepage.png)
+![ATELIER Homepage](screenshots/home.png)
 
 ### Projects
 
