@@ -101,6 +101,15 @@ function atelier_enqueue_assets() {
             true
         );
     }
+
+    if (is_front_page()) {
+        wp_enqueue_style(
+            'atelier-stats',
+            get_theme_file_uri('assets/css/stats.css'),
+            ['atelier-style'],
+            $version
+        );
+    }
 }
 
 add_action('wp_enqueue_scripts', 'atelier_enqueue_assets');

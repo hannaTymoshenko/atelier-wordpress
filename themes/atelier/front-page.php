@@ -83,6 +83,47 @@ $hero_link = get_field('hero_link');
                 'link' => get_field('about_link'),
         ]);
         ?>
+
+        <?php
+        $stats = [
+                [
+                        'number' => get_field('stat_1_number'),
+                        'label'  => get_field('stat_1_label'),
+                ],
+                [
+                        'number' => get_field('stat_2_number'),
+                        'label'  => get_field('stat_2_label'),
+                ],
+                [
+                        'number' => get_field('stat_3_number'),
+                        'label'  => get_field('stat_3_label'),
+                ],
+        ];
+
+        $stats = array_filter($stats, static function ($stat) {
+            return !empty($stat['number']) && !empty($stat['label']);
+        });
+        ?>
+
+        <?php if ($stats) : ?>
+            <section class="stats">
+                <div class="container">
+                    <div class="stats__grid">
+                        <?php foreach ($stats as $stat) : ?>
+                            <div class="stats__item">
+                                <span class="stats__number">
+                                    <?php echo esc_html($stat['number']); ?>
+                                </span>
+                                <span class="stats__label">
+                                    <?php echo esc_html($stat['label']); ?>
+                                </span>
+                            </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
     </main>
 
 <?php get_footer(); ?>
