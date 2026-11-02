@@ -18,6 +18,14 @@ function atelier_enqueue_assets() {
         true
     );
 
+    wp_enqueue_script(
+        'atelier-back-to-top',
+        get_theme_file_uri('assets/js/back-to-top.js'),
+        [],
+        $version,
+        true
+    );
+
     if (is_singular('project')) {
         wp_enqueue_style(
             'atelier-project-single',
@@ -135,6 +143,7 @@ function atelier_setup() {
 
     register_nav_menus([
         'primary' => 'Primary Menu',
+        'footer'  => 'Footer Menu',
     ]);
 }
 

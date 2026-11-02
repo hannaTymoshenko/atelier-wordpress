@@ -107,18 +107,6 @@
     border-bottom: 1px solid currentColor;
 }
 
-.contact-cta::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 55%;
-    height: 100%;
-    background: url("../images/leaf-shadow.png") no-repeat top right / contain;
-    opacity: 0.18;
-    pointer-events: none;
-}
-
 @media (max-width: 1023px) {
     .contact-cta {
         padding: 70px 0 80px;
@@ -172,10 +160,5 @@
         width: 52px;
         height: 52px;
         font-size: 20px;
-    }
-
-    .contact-cta::before {
-        width: 80%;
-        opacity: 0.1;
     }
 }

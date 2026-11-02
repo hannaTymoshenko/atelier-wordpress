@@ -1,5 +1,5 @@
 .stats {
-    padding: 80px 0;
+    padding: 70px 0;
     background-color: #242424;
     color: #fff;
 }
@@ -16,18 +16,20 @@
 
 .stats__number {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     font-family: var(--font-heading);
-    font-size: 64px;
+    font-size: 72px;
     font-weight: 400;
-    line-height: 1.1;
+    line-height: 1;
+    letter-spacing: -2px;
 }
 
 .stats__label {
     display: block;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 1.5;
-    color: #c8c8c8;
+    letter-spacing: 0.3px;
+    color: #b8b8b8;
 }
 
 @media (max-width: 1023px) {
@@ -36,13 +38,13 @@
     }
 
     .stats__number {
-        font-size: 52px;
+        font-size: 60px;
     }
 }
 
 @media (max-width: 768px) {
     .stats {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .stats__grid {
@@ -51,6 +53,11 @@
     }
 
     .stats__number {
-        font-size: 48px;
+        font-size: 50px;
+        letter-spacing: -1px;
+    }
+
+    .stats__label {
+        font-size: 12px;
     }
 }
