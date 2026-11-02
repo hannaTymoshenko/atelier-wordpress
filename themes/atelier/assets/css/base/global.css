@@ -43,7 +43,6 @@ h6, .h6 {
 
 .main {
     padding-top: 80px;
-    padding-bottom: 80px;
 }
 
 @media (max-width: 1023px) {
@@ -76,7 +75,6 @@ h6, .h6 {
 
     .main {
         padding-top: 60px;
-        padding-bottom: 60px;
     }
 
     h1, .title  {

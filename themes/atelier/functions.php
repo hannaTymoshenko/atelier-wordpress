@@ -133,6 +133,13 @@ function atelier_enqueue_assets() {
             $version
         );
     }
+
+    wp_enqueue_style(
+        'atelier-about',
+        get_template_directory_uri() . '/assets/css/about.css',
+        [],
+        filemtime(get_template_directory() . '/assets/css/about.css')
+    );
 }
 
 add_action('wp_enqueue_scripts', 'atelier_enqueue_assets');
