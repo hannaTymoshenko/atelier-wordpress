@@ -147,6 +147,15 @@ function atelier_enqueue_assets() {
         [],
         filemtime(get_template_directory() . '/assets/css/contact.css')
     );
+
+    if (is_404()) {
+        wp_enqueue_style(
+            'atelier-404',
+            get_template_directory_uri() . '/assets/css/404.css',
+            [],
+            filemtime(get_template_directory() . '/assets/css/404.css')
+        );
+    }
 }
 
 add_action('wp_enqueue_scripts', 'atelier_enqueue_assets');
