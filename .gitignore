@@ -1,7 +1,9 @@
 /*
 !/.gitignore
+!/README.md
 !/themes/
 !/plugins/
+!/screenshots/
 
 /themes/*
 !/themes/atelier/
