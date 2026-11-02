@@ -61,6 +61,32 @@ get_header();
         ]);
         ?>
 
+        <?php
+        $featured_projects = new WP_Query([
+            'post_type' => 'project',
+            'post_status' => 'publish',
+            'posts_per_page' => -1,
+            'meta_query' => [
+                [
+                    'key' => 'featured_project',
+                    'value' => '1',
+                ],
+            ],
+        ]);
+        ?>
+
+        <?php
+        get_template_part('template-parts/projects-slider', null, [
+            'title' => 'Selected Works',
+            'label' => 'Our Portfolio',
+            'projects' => $featured_projects,
+            'link' => [
+                'url' => get_post_type_archive_link('project'),
+                'title' => 'View All Projects',
+            ],
+        ]);
+        ?>
+
         <?php get_template_part('template-parts/contact-cta'); ?>
 
     </main>

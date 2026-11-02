@@ -123,9 +123,6 @@
 }
 
 @media (max-width: 991px) {
-    .project-single {
-        padding: 60px 0;
-    }
 
     .project-single__title {
         font-size: 56px;

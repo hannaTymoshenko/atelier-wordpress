@@ -13,6 +13,8 @@
 
             <?php get_template_part('template-parts/projects-grid'); ?>
         </div>
+
+        <?php get_template_part('template-parts/contact-cta'); ?>
     </main>
 
 <?php get_footer(); ?>
