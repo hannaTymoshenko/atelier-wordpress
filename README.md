@@ -1,8 +1,10 @@
-# ATELIER - Custom WordPress Website
+# ATELIER - Architecture Studio Website
 
-ATELIER is a custom WordPress website developed for a fictional architecture studio. The project demonstrates custom theme development, dynamic content management and responsive frontend implementation.
+A modern architecture studio website built from scratch with WordPress, PHP, JavaScript and CSS.
 
-The website was built from scratch using PHP, JavaScript and CSS without a page builder.
+ATELIER features a fully custom WordPress theme, a dedicated plugin for managing architecture projects and a responsive frontend designed around clean typography, large architectural imagery and minimal layouts.
+
+The website combines a carefully crafted visual design with dynamic project content, interactive filtering and reusable components. All core pages are built with custom PHP templates without relying on a page builder.
 
 ## Screenshots
 
@@ -26,21 +28,39 @@ The website was built from scratch using PHP, JavaScript and CSS without a page 
 
 <img src="screenshots/home-mob.png" alt="ATELIER Mobile Homepage" width="350">
 
-## Features
+## Key Features
 
-• Fully custom WordPress theme  
-• Custom plugin for project management  
+### Custom WordPress Development
+
+• Custom WordPress theme built with PHP templates  
+• Dedicated plugin for project management  
 • Custom Post Type for architecture projects  
-• Project categories using custom taxonomies  
-• Advanced Custom Fields (ACF) integration  
-• Dynamic project archive with AJAX filtering  
-• Selected Works slider using Swiper.js  
-• Individual project pages with project navigation  
-• Editable Home, About and Contact pages  
-• Contact Form 7 integration  
+• Custom taxonomy for project categories  
+• Reusable template parts and components  
 • Custom 404 page  
-• Responsive layouts  
-• Reusable PHP template parts  
+
+### Dynamic Project Portfolio
+
+• Project archive with AJAX-powered category filtering  
+• Custom WordPress REST API endpoint for fetching projects  
+• Individual project pages with image galleries and project details  
+• Previous and next project navigation  
+• Selected Works slider powered by Swiper.js  
+
+### Content Management
+
+• Advanced Custom Fields (ACF) integration  
+• Editable content sections across the website  
+• Custom fields for project information  
+• WordPress Gutenberg editor for project galleries  
+• Contact Form 7 integration  
+
+### Frontend
+
+• Responsive layouts for desktop, tablet and mobile  
+• Custom CSS styling without a frontend framework  
+• Interactive elements built with vanilla JavaScript  
+• Minimalist design with a focus on typography, spacing and imagery  
 
 ## Tech Stack
 
@@ -53,29 +73,28 @@ The website was built from scratch using PHP, JavaScript and CSS without a page 
 • Contact Form 7  
 • Swiper.js  
 • WordPress REST API  
-• Git  
 
 ## Project Structure
 
-### themes/atelier/
+The project is organized into a custom WordPress theme and a separate plugin.
 
-A custom WordPress theme responsible for the website layout, frontend functionality and reusable components.
+**`themes/atelier/`**
 
-### plugins/atelier-core/
+Contains the custom theme, PHP templates, reusable components, styles, JavaScript and frontend assets.
 
-A custom plugin responsible for registering project-related content types and taxonomies.
+**`plugins/atelier-core/`**
 
-## Pages
+Handles the registration of the Projects Custom Post Type and project category taxonomy.
 
-• **Home:** Hero section, selected projects, studio introduction and statistics.  
-• **Projects:** Dynamic project listing with category filtering.  
-• **Single Project:** Individual project details, image gallery and navigation between projects.  
-• **About:** Studio introduction, core values, design approach and selected works.  
-• **Contact:** Contact information and inquiry form.  
-• **404:** Custom page-not-found template.  
+## Website Pages
 
-## About This Project
+• **Home** - Hero section, selected projects, studio introduction and statistics  
+• **Projects** - Filterable portfolio of architecture projects  
+• **Single Project** - Project details, image gallery and navigation  
+• **About** - Studio introduction, values, design approach and selected works  
+• **Contact** - Contact information and inquiry form  
+• **404** - Custom page-not-found template  
 
-ATELIER is a portfolio demonstration project created to showcase WordPress development skills, including custom PHP templates, reusable components, ACF-powered content and frontend interactions.
+---
 
-The architecture studio and its content are fictional.
+*ATELIER is a concept website created for portfolio purposes.*
